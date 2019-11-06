@@ -1,3 +1,3 @@
 class Phone < ApplicationRecord
-    has_many carriers, through :activation
+    has_many :carriers, through: :activation
 end
