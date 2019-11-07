@@ -1,0 +1,19 @@
+<h1> Add a New Activation </h1>
+<%= form_for(@activation) do |f| %>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+
+    <%= f.label :IMEI %>
+    <%= f.text_field :phone_number %>
+
+    <%= f.label :phone_id %>
+    <%= f.collection_select :phone_id, Phone.all , :id, :model %>
+
+    <%= f.label :carrier_id %>
+    <%= f.collection_select :carrier_id, Carrier.all , :id, :name %>
+
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
+    <%= f.submit %>
+
+<% end %>

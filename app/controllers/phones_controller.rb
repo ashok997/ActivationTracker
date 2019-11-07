@@ -3,6 +3,10 @@ class PhonesController < ApplicationController
     def new
         @phone = Phone.new
     end
+
+    def index
+        @phones = Phone.all
+    end
     
     def create
         @phone = Phone.new(phone_params)

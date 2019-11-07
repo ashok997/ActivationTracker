@@ -1,6 +1,6 @@
 <h1> Index Page ! </h1>
 <ul>
     <% @carriers.each do |carrier| %>
-        <%= carrier.name %>  - <%= carrier.cost %> - <%= carrier.rating %>
+        Name:  <%= carrier.name %>   Cost: <%= carrier.cost %>  Rating(Out of 5): <%= carrier.rating %> <br>
     <% end %>
 </ul>

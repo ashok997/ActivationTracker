@@ -1,1 +1,7 @@
-<h1> Index Page ! </h1>
+<h1> All Phones </h1>
+
+<ul>
+    <% @phones.each do |p| %>
+        <%= p.model %>  - <%= p.manufacturer %> - <%= p.storage %> <br>
+    <% end %>
+</ul>
