@@ -1,2 +1,5 @@
-<h1><%= @activation.IMEI %></h1>
-<h1><%= @activation.phone_number %></h1>
+<br><br>
+Phone Number: <%= @activation.phone_number %><br>
+IMEI: <%= @activation.IMEI %><br>
+Activated Device: <%=@activation.phone.model %><br>
+Carrier: <%=@activation.carrier.name %>
