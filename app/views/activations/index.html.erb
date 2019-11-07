@@ -1,0 +1,12 @@
+<h1>Index Page </h1>
+
+<ul>
+    <% @activations.each do |activation| %>
+        Phone Number:  <%= activation.phone_number %>  <br> 
+        IMEI: <%= activation.IMEI %>   <br>
+        Activated By: <%= activation.user.name %> <br>
+        Carrier: <%= activation.carrier.name %> <br>
+        Activated Device: <%= activation.phone.model %>
+
+    <% end %>
+</ul>
