@@ -4,6 +4,9 @@ class PhonesController < ApplicationController
         @phone = Phone.new
     end
 
+    def show
+        @phone = Phone.find_by_id(params[:id])
+    end
     def index
         @phones = Phone.all
     end

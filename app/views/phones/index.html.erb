@@ -2,6 +2,6 @@
 
 <ul>
     <% @phones.each do |p| %>
-        <%= p.model %>  - <%= p.manufacturer %> - <%= p.storage %> <br>
+        <%= render partial: "phone", locals:{phone: p} %>
     <% end %>
 </ul>
