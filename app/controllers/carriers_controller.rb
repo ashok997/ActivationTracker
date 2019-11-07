@@ -4,15 +4,19 @@ class CarriersController < ApplicationController
     end
     
     def create
-        @phone = Phone.new(phone_params)
-        if @phone.save
-            redirect_to phones_path
+        @carrier = Carrier.new(carrier_params)
+        if @carrier.save
+            redirect_to carriers_path
         else
             render :new
         end
     end
 
-    def phone_params
-        params.require(:phone).permit(:model, :manufacturer, :storage )
+    def index
+        @carriers = Carrier.all
+    end
+
+    def carrier_params
+        params.require(:carrier).permit(:name, :cost, :rating )
     end
 end

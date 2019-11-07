@@ -1,0 +1,6 @@
+<h1> Index Page ! </h1>
+<ul>
+    <% @carriers.each do |carrier| %>
+        <%= carrier.name %>  - <%= carrier.cost %> - <%= carrier.rating %>
+    <% end %>
+</ul>
