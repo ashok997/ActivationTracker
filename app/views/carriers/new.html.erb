@@ -1,5 +1,7 @@
 <h1> New Carrier </h1>
 
+<%= render partial: "layouts/errors", locals: {object: @carrier} %>
+
 <%= form_for(@carrier) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
