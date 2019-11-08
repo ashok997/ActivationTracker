@@ -2,7 +2,6 @@ class ActivationsController < ApplicationController
 
     def index
         @users = User.all
-        #binding.pry
         if params[:user]
             @activations = Activation.by_user(params[:user])
         else
@@ -15,8 +14,7 @@ class ActivationsController < ApplicationController
     end
 
     def new
-        if params[:phone_id]
-            @phone = Phone.find_by_id(params[:phone_id])
+        if params[:phone_id] && @phone = Phone.find_by_id(params[:phone_id])
             @activation = @phone.activations.new
         else
             @activation =Activation.new
