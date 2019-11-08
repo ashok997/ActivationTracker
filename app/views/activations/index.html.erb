@@ -1,5 +1,13 @@
 <h1>Index Page </h1>
 
+<h2>Filter activations: </h2>
+<div>
+<%= form_tag("/activations", method: "get") do %>
+    <%= select_tag "user", options_from_collection_for_select(@users, "id", "name"), include_blank: true %>
+    <%= submit_tag "Filter" %>
+  <% end %>
+<div>
+
 <ul>
     <% @activations.each do |activation| %>
         Phone Number:  <%= activation.phone_number %>  <br> 
@@ -9,6 +17,6 @@
         <%= link_to 'Details about this activation', activation_path(activation.id) %><br>
         <br>
         <br>
-        
+
     <% end %>
 </ul>
