@@ -1,7 +1,12 @@
 class ActivationsController < ApplicationController
 
     def index
-        @activations = Activation.all
+        #binding.pry
+        if params[:user_id]
+            @activations = Activation.by_user(params[:user_id])
+        else
+            @activations = Activation.all
+        end
     end
 
     def show
