@@ -1,4 +1,7 @@
 <h1> Add a New Activation </h1>
+
+<%= render partial: "layouts/errors", locals: {object: @activation} %>
+
 <%= form_for(@activation) do |f| %>
     <%= f.label :phone_number %>
     <%= f.text_field :phone_number %>
