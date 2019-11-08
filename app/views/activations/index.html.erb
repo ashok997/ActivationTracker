@@ -3,7 +3,7 @@
 <h2>Filter activations: </h2>
 <div>
 <%= form_tag("/activations", method: "get") do %>
-    <%= select_tag "user", options_from_collection_for_select(@users, "id", "name"), include_blank: true %>
+    <%= select_tag "user", options_from_collection_for_select(@users, "id", "name")%>
     <%= submit_tag "Filter" %>
   <% end %>
 <div>
