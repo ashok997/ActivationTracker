@@ -1,12 +1,10 @@
-<h1>Index Page </h1>
+<div class ="header"> All Activations </div>
 
-<h2>Filter activations: </h2>
-<div>
+Filter activations: 
 <%= form_tag("/activations", method: "get") do %>
     <%= select_tag "user", options_from_collection_for_select(@users, "id", "name")%>
     <%= submit_tag "Filter" %>
   <% end %>
-<div>
 
 <ul>
     <% @activations.each do |activation| %>
