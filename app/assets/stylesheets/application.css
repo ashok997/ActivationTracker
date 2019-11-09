@@ -78,3 +78,10 @@ table {
      font-family: 'Courier New', Courier, monospace;
      font-size: 24px;
  }
+
+ .error_explanation {
+    text-decoration: none;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+ }
