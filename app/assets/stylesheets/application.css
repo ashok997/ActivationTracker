@@ -97,9 +97,21 @@ table {
     font-size: 36px;
  }
 
- .main-content a { 
+ .main-content  { 
    text-decoration: none;
    color: brown;
    font-family: 'Courier New', Courier, monospace;
    font-size: 24px;
+   padding: 10px;
+   height: 50px;
+   align-items: center;
 }
+
+input {
+   width: 25%;
+ }
+
+ label {
+    color: rgb(21, 120, 185);
+    font-size: 24px;
+ }
