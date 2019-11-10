@@ -1,5 +1,6 @@
 class PhonesController < ApplicationController
-
+    before_action :require_login
+    skip_before_action :require_login, only: [:index]
     def new
         @phone = Phone.new
     end
@@ -22,5 +23,9 @@ class PhonesController < ApplicationController
 
     def phone_params
         params.require(:phone).permit(:model, :manufacturer, :storage )
+    end
+
+    def require_login
+        return head(:forbidden) unless session.include? :user_id
     end
 end

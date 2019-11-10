@@ -1,4 +1,6 @@
 class CarriersController < ApplicationController
+    before_action :require_login
+
     def new
         @carrier = Carrier.new
     end
@@ -18,5 +20,9 @@ class CarriersController < ApplicationController
 
     def carrier_params
         params.require(:carrier).permit(:name, :cost, :rating )
+    end
+
+    def require_login
+        return head(:forbidden) unless session.include? :user_id
     end
 end
