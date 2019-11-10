@@ -111,7 +111,14 @@ input {
    width: 25%;
  }
 
- label {
+label {
     color: rgb(21, 120, 185);
     font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+ }
+
+ p {
+   color: rgb(240, 4, 4);
+   font-size: 24px;
+   font-family: 'Courier New', Courier, monospace;
  }

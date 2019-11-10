@@ -1,6 +1,10 @@
 <div class ="header"> All Carrier </div>
 <ul>
+    <div class ="main-content">
     <% @carriers.each do |carrier| %>
-        Name:  <%= carrier.name %>   Cost: <%= carrier.cost %>  Rating(Out of 5): <%= carrier.rating %> <br>
+        Name:  <%= carrier.name %>  <br>
+        Cost: <%= carrier.cost %>  <br>
+        Rating(Out of 5): <%= carrier.rating %> <br><br>
     <% end %>
+    </div>
 </ul>
