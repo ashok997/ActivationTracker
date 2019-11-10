@@ -1,16 +1,16 @@
-<h1> Login Page </h1>
+<div class ="header"> Login Page </div>
 
 <%= flash[:message] if flash[:message] %>
 <%= form_for :user do |f| %>
 
+<div class ="main-content">
     <%= f.label :username %>
     <%= f.text_field :username %>
-    <br>
     <br>
     <%= f.label :password %>
     <%= f.password_field :password %>
 
     <%= f.submit "Submit" %>
 
-
+    </div>
 <% end %>
