@@ -15,9 +15,11 @@ class UsersController < ApplicationController
     end
 
     def show
-        redirect_if_not_logged_in
         @user = User.find_by_id(params[:id])
-        redirect_to '/' if !@user
+        if !@user
+            flash[:message]= "User you are looking for does not exits!!" 
+            redirect_to '/' 
+        end
     end
 
     private
