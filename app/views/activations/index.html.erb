@@ -1,20 +1,22 @@
 <div class ="header"> All Activations </div>
 
-Filter activations: 
+<p>Filter activations: 
 <%= form_tag("/activations", method: "get") do %>
     <%= select_tag "user", options_from_collection_for_select(@users, "id", "name")%>
     <%= submit_tag "Filter" %>
   <% end %>
+</p>
 
 <ul>
     <% @activations.each do |activation| %>
-        Phone Number:  <%= activation.phone_number %>  <br> 
+        <div class= "main-content">
+        Phone Number:  <%= activation.phone_number %>  
        
-        Activated By: <%= activation.user.name %> <br>
+        Activated By: <%= activation.user.name %> 
 
         <%= link_to 'Details about this activation', activation_path(activation.id) %><br>
-        <br>
-        <br>
+       </div>
+       <br>
 
     <% end %>
 </ul>
