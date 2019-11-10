@@ -109,6 +109,7 @@ table {
 
 input {
    width: 25%;
+
  }
 
 label {
@@ -122,3 +123,5 @@ label {
    font-size: 24px;
    font-family: 'Courier New', Courier, monospace;
  }
+
+

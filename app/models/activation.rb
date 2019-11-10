@@ -5,6 +5,9 @@ class Activation < ApplicationRecord
 
   validates :phone_number, :IMEI, presence: true
   validates :IMEI, :phone_number, uniqueness: true
+  validates :phone_number, length: {is: 10}
+  validates :IMEI, length: {is: 15}
+
 
   def self.by_user(user_id)
     where(user: user_id)

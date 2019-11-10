@@ -11,7 +11,7 @@
 
     <%= f.label :phone_id %>
     <%= f.collection_select :phone_id, Phone.all , :id, :model %>
-
+    <br>
     <%= f.label :carrier_id %>
     <%= f.collection_select :carrier_id, Carrier.all , :id, :name %>
 
