@@ -1,5 +1,7 @@
 <div class ="header"> New Phone ! </div>
 
+<%= render partial: "layouts/errors", locals: {object: @phone} %>
+
 <%= form_for(@phone) do |f| %>
     <%= f.label :model %>
     <%= f.text_field :model %>

@@ -16,7 +16,9 @@ class ApplicationController < ActionController::Base
     end
 
     def require_login
-        flash[:message] = "You need to Log In to view this page" unless session.include? :user_id
-        redirect_to "/"
+        if !logged_in?
+            flash[:message] = "You need to Log In to view this page" 
+            redirect_to '/' 
+        end
     end
 end
