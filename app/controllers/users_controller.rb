@@ -33,8 +33,14 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        @user = User.find_by_id(params[:id]).destroy
-        redirect_to '/'
+        if session[:user_id] == @user.id
+            @user = User.find_by_id(params[:id]).destroy
+            redirect_to '/'
+        else
+            flash[:message]= "You do not have permission to make this change"
+            redirect_to '/'
+        end
+        
     end
 
     def update

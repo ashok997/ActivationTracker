@@ -12,7 +12,11 @@ class ActivationsController < ApplicationController
     end
 
     def show
-        @activation = Activation.find(params[:id])
+        @activation = Activation.find_by_id(params[:id])
+        if !@activation
+            flash[:message]= "Activation you are looking for does not exits!!" 
+            redirect_to '/' 
+        end
     end
 
     def new
