@@ -1,24 +1,29 @@
-# README
+Activation Tracker
+Welcome to Activation Tracker project! This project was built as the requirement of Flatiron School project. The application will allow users to create and keep track of all the phones that they have in their store and also records all the activations they have completed.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Installation
+Go to your favorite console and then clone the project:
 
-* Ruby version
+ $ git clone https://github.com/ashok997/ActivationTracker.git
+And go into the project direcotry:
 
-* System dependencies
+  $ cd ActivationTracker
+then execute:
 
-* Configuration
+$ bundle install
+$ rails s
 
-* Database creation
+the open the browser and type:
+$ http://localhost:3000/
 
-* Database initialization
+Usage
+The application will allow users to create and keep track of all the phones that they have in their store and also records all the activations they have completed.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+License
+The project is available as open source under the terms of the MIT License.
 
-* ...
+Code of Conduct
+Everyone interacting in the ActivationTracker project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
