@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :activations
+    has_many :activations, dependent: :destroy
     has_secure_password
 
     validates :username, :email, presence: true

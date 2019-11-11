@@ -5,6 +5,8 @@ Your Info: </div>
     Name:<%= @user.name %><br>
     Email:<%= @user.email %><br>
     Username:<%= @user.username %><br>
+    <%=link_to "Edit", edit_user_path(@user) %>
+    <%=button_to "Delete", @user, method: :delete%>
 </div>
 
 

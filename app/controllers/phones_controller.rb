@@ -8,6 +8,10 @@ class PhonesController < ApplicationController
 
     def show
         @phone = Phone.find_by_id(params[:id])
+        if !@phone
+            flash[:message]= "The Phone you are looking for does not exits!!" 
+            redirect_to '/' 
+        end
     end
     def index
         @phones = Phone.all

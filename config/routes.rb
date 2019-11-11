@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
 
-  resources :activations
+  resources :activations 
   resources :carriers
   resources :phones do
     resources :activations, shallow: true

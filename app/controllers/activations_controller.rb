@@ -16,7 +16,6 @@ class ActivationsController < ApplicationController
     end
 
     def new
-        redirect_if_not_logged_in
         if params[:phone_id] && @phone = Phone.find_by_id(params[:phone_id])
             @activation = @phone.activations.new
         else
