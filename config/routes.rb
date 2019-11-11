@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#facebook_login'
 
   delete '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy'
 
 
   resources :activations 
