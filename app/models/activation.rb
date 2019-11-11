@@ -12,4 +12,9 @@ class Activation < ApplicationRecord
   def self.by_user(user_id)
     where(user: user_id)
   end
+
+  def self.phone(phone_id)
+    where(phone: phone_id)
+  end
+  
 end

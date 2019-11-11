@@ -4,7 +4,11 @@ class ActivationsController < ApplicationController
 
     def index
         @users = User.all
-        if params[:user]
+        @phones = Phone.all
+
+        if !params[:user].blank? && !params[:phone].blank?
+            @activations = Activation.by_user(params[:user]).phone(params[:phone])
+        elsif !params[:user].blank?
             @activations = Activation.by_user(params[:user])
         else
             @activations = Activation.all
@@ -28,7 +32,6 @@ class ActivationsController < ApplicationController
     end
 
     def create
-        redirect_if_not_logged_in
         @activation = Activation.new(activation_params)
         if @activation.save
             redirect_to activations_path(@activation)

@@ -3,6 +3,7 @@
 <p>Filter activations: 
 <%= form_tag("/activations", method: "get") do %>
     <%= select_tag "user", options_from_collection_for_select(@users, "id", "name")%>
+    <%= select_tag "phone", options_from_collection_for_select(@phones, "id", "model")%>
     <%= submit_tag "Filter" %>
   <% end %>
 </p>
