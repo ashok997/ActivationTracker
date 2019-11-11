@@ -13,8 +13,8 @@ class Activation < ApplicationRecord
     where(user: user_id)
   end
 
-  def self.phone(phone_id)
-    where(phone: phone_id)
+  def self.with_carrier(carrier_id)
+    where(carrier: carrier_id)
   end
-  
+
 end

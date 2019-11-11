@@ -2,8 +2,8 @@
 
 <p>Filter activations: 
 <%= form_tag("/activations", method: "get") do %>
-    <%= select_tag "user", options_from_collection_for_select(@users, "id", "name")%>
-    <%= select_tag "phone", options_from_collection_for_select(@phones, "id", "model")%>
+    <%= select_tag "user", options_from_collection_for_select(@users, "id", "name"), include_blank: true%>
+    <%= select_tag "carrier", options_from_collection_for_select(@carriers, "id", "name"), include_blank: true%>
     <%= submit_tag "Filter" %>
   <% end %>
 </p>

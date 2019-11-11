@@ -4,12 +4,14 @@ class ActivationsController < ApplicationController
 
     def index
         @users = User.all
-        @phones = Phone.all
+        @carriers = Carrier.all
 
-        if !params[:user].blank? && !params[:phone].blank?
-            @activations = Activation.by_user(params[:user]).phone(params[:phone])
+        if !params[:user].blank? && !params[:carrier].blank?
+            @activations = Activation.by_user(params[:user]).with_carrier(params[:carrier])
         elsif !params[:user].blank?
             @activations = Activation.by_user(params[:user])
+        elsif !params[:carrier].blank?
+            @activations = Activation.with_carrier(params[:carrier])
         else
             @activations = Activation.all
         end
